@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+
+
+<h1>iOS Toggle</h1>
+
+
+<input type="checkbox" data-control="touch-toggle" id="foo" name="foo">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+	var $ck = $("input[data-control='touch-toggle']");
+
+	$ck
+		.on("click",function(){
+			console.log(this, $(this).val());
+		})
+		.wrap("<div class='touch-toggle' />")
+	;
+
+	var $t = $(".touch-toggle");
+
+	$t
+		.append("<label class='toggle-on'>On")
+		.append("<label class='toggle-off'>Off")
+		.append("<div class='toggle-handle' />")
+
+
+
+</script>
+
+</body>
+</html>
